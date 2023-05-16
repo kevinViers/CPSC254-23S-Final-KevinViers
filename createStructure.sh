@@ -1,31 +1,40 @@
 #!/bin/bash
 
-# Create the main folder
+# Create the 'final' folder
 mkdir final
 cd final
 
-# Create subfolders
-mkdir src data config
-
-# Create files in src folder
+# Create the 'src' folder
+mkdir src
 cd src
+
+# Create 'main.cpp' and 'header.h' files
 touch main.cpp header.h
+
+# Go back to the 'final' folder
 cd ..
 
-# Create folders in the data folder
+# Create the 'data' folder
+mkdir data
 cd data
+
+# Create 'main' and 'backup' folders
 mkdir main backup
 
-# Create files in backup folder
-cd backup
-touch mainDB.db backupDB.db
+# Create 'mainDB.db' and 'backupDB.db' files
+touch main/mainDB.db backup/backupDB.db
+
+# Go back to the 'final' folder
 cd ..
 
-# Create file in config folder
-cd ../config
+# Create the 'config' folder
+mkdir config
+cd config
+
+# Create 'config.yml' file
 touch config.yml
 
-# Go back to the original directory
+# Go back to the 'final' folder
 cd ..
 
 echo "Folder structure created successfully!"
